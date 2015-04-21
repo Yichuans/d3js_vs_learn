@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'> -->
+    <!-- <link href="styles/style.css" rel="stylesheet" type="text/css"> -->
+    <script src='https://code.jquery.com/jquery-1.11.2.js'></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <style>
+      a.test {
+        font-weight: bold;
+      }
+
+    .chart div {
+      font: 10px sans-serif;
+      background-color: steelblue;
+      text-align: right;
+      padding: 3px;
+      margin: 1px;
+      color: white;
+    }
+    </style>
+    
+    <style>
+
+    .chart rect {
+      fill: steelblue;
+    }
+
+    .chart text {
+      fill: white;
+      font: 10px sans-serif;
+      text-anchor: end;
+    }
+
+    .myclass {
+      border-width: 1px;
+      border-color: black;
+    }
+
+    .myclass rect {
+      fill: white;
+    }
+
+</style>
+
+  </head>
+  <body>
+
+<svg width='300' height='300' stroke='#000' stroke-width='1' class='myclass'>
+  
+  <rect width='100' height='100'></rect>
+  <rect x='14' y='14' width='100' height='100'></rect>
+  <rect transform='translate(20, 20)' width='100' height='100'></rect>
+  <rect transform='matrix(1, 0, 0, 1, 30, 40)' width='100' height='100'></rect>
+</svg>
+
+<p>p1 </p>
+<p>p2 </p>
+<p>p3 </p>
+
+
+<svg class="chart" width="420" height="120">
+  <g transform="translate(0,0)">
+    <rect width="40" height="19"></rect>
+    <text x="37" y="9.5" dy=".35em">4</text>
+  </g>
+  <g transform="translate(0,20)">
+    <rect width="80" height="19"></rect>
+    <text x="77" y="9.5" dy=".35em">8</text>
+  </g>
+  <g transform="translate(0,40)">
+    <rect width="150" height="19"></rect>
+    <text x="147" y="9.5" dy=".35em">15</text>
+  </g>
+  <g transform="translate(0,60)">
+    <rect width="160" height="19"></rect>
+    <text x="157" y="9.5" dy=".35em">16</text>
+  </g>
+  <g transform="translate(0,80)">
+    <rect width="230" height="19"></rect>
+    <text x="227" y="9.5" dy=".35em">23</text>
+  </g>
+  <g transform="translate(0,100)">
+    <rect width="420" height="19"></rect>
+    <text x="417" y="9.5" dy=".35em">42</text>
+  </g>
+</svg>
+
+
+
+
+<!--       <div class="grandparent">
+          <div class="parent">
+              <div class="child">
+                  <p>Div</p>
+                  <span class="subchild"></span>
+              </div>
+          </div>
+          <div class="surrogateParent1"></div>
+          <div class="surrogateParent2"></div>
+      </div>  
+
+
+
+    <a id='test' href="http://www.bbc.co.uk">jQuery</a>
+    <a id='test2' href='#'>A2</a> -->
+<!--     <h1>Mozilla is cool</h1>
+    <img src="images/firefox-icon.png" alt="The Firefox logo: a flaming fox surrounding the Earth.">
+
+    <button>change user</button>
+
+    <p>At Mozilla, we’re a global community of</p>
+    
+    <ul> 
+      <li>technologists</li>
+      <li>thinkers</li>
+      <li>builders</li>
+    </ul>
+
+    <p>working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+    <p>Read the <a href="https://www.mozilla.org/en-US/about/manifesto/">Mozilla Manifesto</a> to learn even more about the values and principles that guide the pursuit of our mission.</p>
+    <script src='script/main.js'></script>
+
+-->
+
+
+
+  <script>
+  // $(document).ready(function(){
+
+    
+  //   function foo(){
+  //     console.log('foo');
+  //   }
+
+  //   var bar = function(){
+  //     console.log('bar');
+  //   }
+
+  //   $('a').one('mouseover', foo);
+  //   $('a').on('mouseover', bar);
+
+  // // add div listener
+  // $( "div.child" ).on( "click", function( event ) {
+  //     console.log( "event object:" );
+  //     console.dir( event );
+  // });
+
+
+
+  // })
+
+  $(document).ready(function(){
+
+    // d3.select("body").selectAll("p")
+    //     .data([4, 8, 15, 16, 23, 42])
+    //   .enter().append("p")
+    //     .text(function(d) { return "I’m number " + d + "!"; });
+
+        // d3.select("body").transition()
+        // .style("background-color", "black")
+        // .duration(540);
+
+    //     d3.select("body")
+    // .style("color", "black")
+    // .style("background-color", "white");
+
+// data = [1, 8, 15,4,5,6];
+
+
+// var bars = d3.select(".chart")
+//   .selectAll("div")
+//     .data(data);
+
+// bars.remove();
+
+// bars.enter().append("div")
+//     .style("width", function(d) { return d * 10 + "px"; })
+//     .text(function(d) { return d; });
+
+d3.select("body")
+    .style("color", "green") // make the body green
+  .transition()
+    .delay(750)
+    .style("color", "red"); // then transition to red
+
+
+      })
+
+  </script>
+  </body>
+</html>
